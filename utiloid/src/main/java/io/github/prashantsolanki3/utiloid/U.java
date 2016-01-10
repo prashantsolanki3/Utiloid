@@ -36,7 +36,7 @@ public class U extends Utiloid {
     }
 
 
-    public static float pixelstoDpi(float pixel) {
+    public static float pixelsToDpi(float pixel) {
         checkInit();
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, pixel, context.getResources().getDisplayMetrics());
     }
@@ -59,13 +59,13 @@ public class U extends Utiloid {
     public static float getScreenWidthDpi() {
         checkInit();
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-        return pixelstoDpi(metrics.widthPixels);
+        return pixelsToDpi(metrics.widthPixels);
     }
 
     public static float getScreenHeightDpi() {
         checkInit();
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-        return pixelstoDpi(metrics.heightPixels);
+        return pixelsToDpi(metrics.heightPixels);
     }
 
 
