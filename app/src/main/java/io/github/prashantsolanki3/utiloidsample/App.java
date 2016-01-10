@@ -26,8 +26,7 @@ public class App extends Application {
         // Whichever you like.
 
         //You can use utiloid now.
-        U.screenHeightDpi();
-        U.screenWidthDpi();
+        U.getScreenHeightDpi();
         //...
 
     }
