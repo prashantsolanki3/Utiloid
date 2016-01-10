@@ -42,31 +42,30 @@ public class U extends Utiloid {
     }
 
 
-    public static float screenWidthPixels() {
+    public static float getScreenWidthPixels() {
         checkInit();
-        DisplayMetrics metrics = new DisplayMetrics();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return metrics.widthPixels;
     }
 
 
-    public static float screenHeightPixels() {
+    public static float getScreenHeightPixels() {
         checkInit();
-        DisplayMetrics metrics = new DisplayMetrics();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return metrics.heightPixels;
     }
 
 
-    public static float screenWidthDpi() {
+    public static float getScreenWidthDpi() {
         checkInit();
-        DisplayMetrics metrics = new DisplayMetrics();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return pixelstoDpi(metrics.widthPixels);
     }
 
-
-    public static float screenHeightDpi() {
+    public static float getScreenHeightDpi() {
         checkInit();
-        DisplayMetrics metrics = new DisplayMetrics();
-        return dpiToPixels(metrics.heightPixels);
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        return pixelstoDpi(metrics.heightPixels);
     }
 
 
