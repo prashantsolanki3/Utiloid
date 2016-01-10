@@ -1,5 +1,6 @@
 package io.github.prashantsolanki3.utiloid;
 
+
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Patterns;
@@ -12,6 +13,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 
+
 /**
  * Package io.github.prashantsolanki3.utiloid.lib
  * <p>
@@ -22,19 +24,23 @@ import java.util.regex.Matcher;
  */
 public class U extends Utiloid {
 
+
     public static boolean isNull(Object o) {
         return o == null;
     }
+
 
     public static float dpiToPixels(float dpi) {
         checkInit();
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpi, context.getResources().getDisplayMetrics());
     }
 
+
     public static float pixelstoDpi(float pixel) {
         checkInit();
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, pixel, context.getResources().getDisplayMetrics());
     }
+
 
     public static float screenWidthPixels() {
         checkInit();
@@ -42,11 +48,13 @@ public class U extends Utiloid {
         return metrics.widthPixels;
     }
 
+
     public static float screenHeightPixels() {
         checkInit();
         DisplayMetrics metrics = new DisplayMetrics();
         return metrics.heightPixels;
     }
+
 
     public static float screenWidthDpi() {
         checkInit();
@@ -54,11 +62,13 @@ public class U extends Utiloid {
         return pixelstoDpi(metrics.widthPixels);
     }
 
+
     public static float screenHeightDpi() {
         checkInit();
         DisplayMetrics metrics = new DisplayMetrics();
         return dpiToPixels(metrics.heightPixels);
     }
+
 
     public static ArrayList<String> extractUrlsFromText(String text) {
         checkInit();
@@ -71,10 +81,12 @@ public class U extends Utiloid {
         return links;
     }
 
+
     public static void setDataToFile(String data, String fileName) {
         checkInit();
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
+
 
         try {
             fileWriter = new FileWriter(context.getFileStreamPath(fileName));
@@ -95,6 +107,7 @@ public class U extends Utiloid {
         }
     }
 
+
     public static String getDataFromFile(String tag) {
         checkInit();
         BufferedReader bufferedReader = null;
@@ -113,6 +126,7 @@ public class U extends Utiloid {
         } finally {
             try {
 
+
                 if (bufferedReader != null)
                     bufferedReader.close();
                 if (fileReader != null)
@@ -124,4 +138,5 @@ public class U extends Utiloid {
         return stringBuilder.toString();
     }
 
-}
+
+} 

@@ -1,6 +1,8 @@
 package io.github.prashantsolanki3.utiloid;
 
+
 import android.content.Context;
+
 
 /**
  * Package io.github.prashantsolanki3.utiloid
@@ -13,12 +15,14 @@ import android.content.Context;
 public class Utiloid {
     protected static Context context = null;
 
+
     public static void init(Context context) {
         Utiloid.context = context;
     }
+
 
     protected static void checkInit() {
         if (U.isNull(context))
             throw new RuntimeException("Utiloid must be initialized before usage.");
     }
-}
+} 
