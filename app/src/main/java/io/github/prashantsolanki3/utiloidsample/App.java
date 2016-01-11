@@ -2,9 +2,8 @@ package io.github.prashantsolanki3.utiloidsample;
 
 import android.app.Application;
 
-import io.github.prashantsolanki3.utiloid.U;
-import io.github.prashantsolanki3.utiloid.Utiloid;
-
+import static io.github.prashantsolanki3.utiloid.Utiloid.BASIC_UTILS;
+import static io.github.prashantsolanki3.utiloid.Utiloid.init;
 /**
  * Package io.github.prashantsolanki3.utiloidsample
  * <p>
@@ -20,13 +19,13 @@ public class App extends Application {
         super.onCreate();
 
         //Simple Initialization
-        Utiloid.init(getApplicationContext());
+        init(getApplicationContext());
         //or
         // U.init(getApplicationContext());
         // Whichever you like.
 
         //You can use utiloid now.
-        U.getScreenHeightDpi();
+        BASIC_UTILS.isNull(getApplicationContext());
         //...
 
     }

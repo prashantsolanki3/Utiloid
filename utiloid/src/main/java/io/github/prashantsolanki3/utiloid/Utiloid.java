@@ -3,6 +3,14 @@ package io.github.prashantsolanki3.utiloid;
 
 import android.content.Context;
 
+import io.github.prashantsolanki3.utiloid.utils.BasicUtils;
+import io.github.prashantsolanki3.utiloid.utils.ConversionUtils;
+import io.github.prashantsolanki3.utiloid.utils.DisplayUtils;
+import io.github.prashantsolanki3.utiloid.utils.FileUtils;
+import io.github.prashantsolanki3.utiloid.utils.TextUtils;
+
+import static io.github.prashantsolanki3.utiloid.utils.BasicUtils.isNull;
+
 
 /**
  * Package io.github.prashantsolanki3.utiloid
@@ -13,16 +21,30 @@ import android.content.Context;
  * Github: @prashantsolanki3
  */
 public class Utiloid {
-    protected static Context context = null;
+    public static Context context = null;
 
-
-    public static void init(Context context) {
+    public static synchronized void init(Context context) {
         Utiloid.context = context;
     }
 
-
-    protected static void checkInit() {
-        if (U.isNull(context))
+    public static synchronized void checkInit() {
+        if (isNull(context))
             throw new RuntimeException("Utiloid must be initialized before usage.");
     }
-} 
+
+    public static class BASIC_UTILS extends BasicUtils {
+    }
+
+    public static class CONVERSION_UTILS extends ConversionUtils {
+    }
+
+    public static class DISPLAY_UTILS extends DisplayUtils {
+    }
+
+    public static class FILE_UTILS extends FileUtils {
+    }
+
+    public static class TEXT_UTILS extends TextUtils {
+    }
+
+}
