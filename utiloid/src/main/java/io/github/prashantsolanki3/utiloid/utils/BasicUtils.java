@@ -1,7 +1,5 @@
 package io.github.prashantsolanki3.utiloid.utils;
 
-import static io.github.prashantsolanki3.utiloid.Utiloid.checkInit;
-
 /**
  * Package io.github.prashantsolanki3.utiloid.utils
  * <p>
@@ -12,7 +10,6 @@ import static io.github.prashantsolanki3.utiloid.Utiloid.checkInit;
  */
 public class BasicUtils {
     public static synchronized boolean isNull(Object o) {
-        checkInit();
         return o == null;
     }
 }

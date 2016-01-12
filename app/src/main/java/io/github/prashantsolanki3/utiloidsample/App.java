@@ -2,7 +2,7 @@ package io.github.prashantsolanki3.utiloidsample;
 
 import android.app.Application;
 
-import static io.github.prashantsolanki3.utiloid.Utiloid.BASIC_UTILS;
+import static io.github.prashantsolanki3.utiloid.Utiloid.BASIC_UTILS.isNull;
 import static io.github.prashantsolanki3.utiloid.Utiloid.init;
 /**
  * Package io.github.prashantsolanki3.utiloidsample
@@ -25,7 +25,7 @@ public class App extends Application {
         // Whichever you like.
 
         //You can use utiloid now.
-        BASIC_UTILS.isNull(getApplicationContext());
+        isNull(getApplicationContext());
         //...
 
     }
