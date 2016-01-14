@@ -7,6 +7,7 @@ import io.github.prashantsolanki3.utiloid.utils.BasicUtils;
 import io.github.prashantsolanki3.utiloid.utils.ConversionUtils;
 import io.github.prashantsolanki3.utiloid.utils.DisplayUtils;
 import io.github.prashantsolanki3.utiloid.utils.FileUtils;
+import io.github.prashantsolanki3.utiloid.utils.PackageUtils;
 import io.github.prashantsolanki3.utiloid.utils.TextUtils;
 
 import static io.github.prashantsolanki3.utiloid.utils.BasicUtils.isNull;
@@ -21,6 +22,7 @@ import static io.github.prashantsolanki3.utiloid.utils.BasicUtils.isNull;
  * Github: @prashantsolanki3
  */
 public class Utiloid {
+
     public static Context context = null;
 
     public static synchronized void init(Context context) {
@@ -32,19 +34,16 @@ public class Utiloid {
             throw new RuntimeException("Utiloid must be initialized before usage.");
     }
 
-    public static class BASIC_UTILS extends BasicUtils {
-    }
+    public static class BASIC_UTILS extends BasicUtils {}
 
-    public static class CONVERSION_UTILS extends ConversionUtils {
-    }
+    public static class CONVERSION_UTILS extends ConversionUtils {}
 
-    public static class DISPLAY_UTILS extends DisplayUtils {
-    }
+    public static class DISPLAY_UTILS extends DisplayUtils {}
 
-    public static class FILE_UTILS extends FileUtils {
-    }
+    public static class FILE_UTILS extends FileUtils {}
 
-    public static class TEXT_UTILS extends TextUtils {
-    }
+    public static class TEXT_UTILS extends TextUtils {}
+
+    public static class PACKAGE_UTILS extends PackageUtils{}
 
 }
