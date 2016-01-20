@@ -1,6 +1,5 @@
 package io.github.prashantsolanki3.utiloid;
 
-
 import android.content.Context;
 
 import io.github.prashantsolanki3.utiloid.utils.BasicUtils;
@@ -11,7 +10,6 @@ import io.github.prashantsolanki3.utiloid.utils.PackageUtils;
 import io.github.prashantsolanki3.utiloid.utils.TextUtils;
 
 import static io.github.prashantsolanki3.utiloid.utils.BasicUtils.isNull;
-
 
 /**
  * Package io.github.prashantsolanki3.utiloid
